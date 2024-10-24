@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:memulai_flutter/async_page.dart';
 import 'package:memulai_flutter/counter_page.dart';
 import 'package:memulai_flutter/form_page.dart';
+import 'package:memulai_flutter/future_builder_page.dart';
 import 'package:memulai_flutter/http_get_page.dart';
 import 'package:memulai_flutter/http_post_page.dart';
 
@@ -124,6 +125,25 @@ class HomePage extends StatelessWidget {
             ),
             child: Text(
               "HTTP Post",
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              //cara penggunaan navigation
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => FutureBuilderPage(),
+                ),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+            ),
+            child: Text(
+              "Future Builder",
               style: TextStyle(
                 color: Colors.black,
               ),
